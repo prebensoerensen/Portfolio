@@ -1,0 +1,70 @@
+/* #pathA {
+  stroke-dasharray: 400 5000;
+  stroke-dashoffset: 5400;
+  animation: animate-pathA 1s forwards ease-in-out;
+}
+#pathB {
+  stroke-dasharray: 400 5000;
+  stroke-dashoffset: 5400;
+  animation: animate-pathB 1s forwards ease-in-out;
+}
+#pathC {
+  stroke-dasharray: 400 5000;
+  stroke-dashoffset: 5400;
+  animation: animate-pathC 1s forwards ease-in-out;
+}
+
+@keyframes animate-pathA {
+  to {
+    stroke-dashoffset: 3130;
+  }
+}
+@keyframes animate-pathB {
+  to {
+    stroke-dasharray: 0 5000;
+    stroke-dashoffset: 4800;
+  }
+}
+
+@keyframes animate-pathC {
+  to {
+    stroke-dashoffset: 2530;
+  }
+} */
+.hamburger {
+    border: 3px solid black;
+}
+
+#pathA {
+  stroke-dasharray: 400 5000;
+  stroke-dashoffset: 5400;
+  animation: animate-pathA 1s forwards ease-in-out;
+}
+#pathB {
+  stroke-dasharray: 400 5000;
+  stroke-dashoffset: 5400;
+  animation: animate-pathB 1s forwards ease-in-out;
+}
+#pathC {
+  stroke-dasharray: 400 5000;
+  stroke-dashoffset: 5400;
+  animation: animate-pathC 1s forwards ease-in-out;
+}
+
+@keyframes animate-pathA {
+  to {
+    stroke-dashoffset: 3125;
+  }
+}
+@keyframes animate-pathB {
+  to {
+    stroke-dasharray: 0 5000;
+    stroke-dashoffset: 4800;
+  }
+}
+
+@keyframes animate-pathC {
+  to {
+    stroke-dashoffset: 2530;
+  }
+}
