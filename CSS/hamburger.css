@@ -31,10 +31,11 @@
     stroke-dashoffset: 2530;
   }
 } */
-.hamburger {
-    border: 3px solid black;
-}
 
+.hamburger {
+  animation: shrink 1s forwards ease-out;
+  filter: drop-shadow(0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.7));
+}
 #pathA {
   stroke-dasharray: 400 5000;
   stroke-dashoffset: 5400;
@@ -43,7 +44,7 @@
 #pathB {
   stroke-dasharray: 400 5000;
   stroke-dashoffset: 5400;
-  animation: animate-pathB 1s forwards ease-in-out;
+  animation: animate-pathB .5s forwards ease-in-out;
 }
 #pathC {
   stroke-dasharray: 400 5000;
@@ -53,18 +54,57 @@
 
 @keyframes animate-pathA {
   to {
+    stroke-dasharray: 600 4700;
     stroke-dashoffset: 3125;
+    stroke: rgb(167, 0, 0);
+  }
+  50% {
+    stroke-width: 60;
+  }
+  100% {
+    stroke-width: 100;
   }
 }
 @keyframes animate-pathB {
   to {
-    stroke-dasharray: 0 5000;
-    stroke-dashoffset: 4800;
+    stroke-dasharray: 3300 5000;
+    stroke-dashoffset: 7600;
+    stroke-linecap: butt;
+    stroke: rgb(118, 24, 24);
+  }
+  50% {
+    stroke-width: 60;
+  }
+  100% {
+    stroke-width: 70;
   }
 }
 
 @keyframes animate-pathC {
   to {
+    stroke-dasharray: 600 4700;
     stroke-dashoffset: 2530;
+    stroke: red;
+  }
+  50% {
+    stroke-width: 60;
+  }
+  100% {
+    stroke-width: 100;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+    
+  }
+  90% {
+    transform: scale(0.5);
+    
+  }
+  100% {
+    transform: scale(0.7);
+    
   }
 }
