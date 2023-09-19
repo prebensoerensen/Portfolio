@@ -99,7 +99,7 @@
     stroke-dashoffset: 5400;
   }
   50% {
-    stroke-width: 100;
+    stroke-width: 60;
   }
   100% {
     stroke-width: 50;
@@ -125,7 +125,7 @@
     stroke-dashoffset: 5400;
   }
   50% {
-    stroke-width: 100;
+    stroke-width: 60;
   }
   100% {
     stroke-width: 50;
