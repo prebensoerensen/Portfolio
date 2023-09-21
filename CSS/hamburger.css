@@ -55,15 +55,21 @@
 }
 
 @keyframes animate-pathA-to-open {
-  to {
+  /* to {
     stroke-dasharray: 600 4700;
     stroke-dashoffset: 3130;
+  } */
+  20% {
+    stroke-dasharray: 400 5000;
+    stroke-dashoffset: 5400;
   }
   50% {
     stroke-width: 60;
   }
   100% {
     stroke-width: 100;
+    stroke-dasharray: 600 4700;
+    stroke-dashoffset: 3130;
   }
 }
 @keyframes animate-pathB-to-open {
@@ -81,15 +87,22 @@
 }
 
 @keyframes animate-pathC-to-open {
-  to {
+  /* to {
     stroke-dasharray: 600 4700;
     stroke-dashoffset: 2535;
+  } */
+  20% {
+    stroke-dasharray: 400 5000;
+    stroke-dashoffset: 5400;
   }
+
   50% {
     stroke-width: 60;
   }
   100% {
     stroke-width: 100;
+    stroke-dasharray: 600 4700;
+    stroke-dashoffset: 2535;
   }
 }
 
