@@ -2,6 +2,7 @@
   color: rgb(53, 44, 45);
   perspective: 1000px;
   transform-style: preserve-3d;
+  font-family: "Poppins", sans-serif;
 }
 
 *,
