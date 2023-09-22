@@ -11,6 +11,7 @@ html {
   box-sizing: border-box;
 }
 body {
+  position: relative;
   background: hsl(0, 0%, 20%);
   color: #f2f2f2;
   /* text-shadow: 0 0 1rem rgba(36, 36, 36, 0.8); */
