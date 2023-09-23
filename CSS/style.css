@@ -15,3 +15,27 @@ body {
   height: 300vh;
   -webkit-font-smoothing: antialiased;
 }
+
+.home {
+  height: 100vh;
+  height: 100dvh;
+}
+
+#my-name-svg {
+  stroke-dasharray: 170 10000;
+  stroke-dashoffset: 170;
+  animation: name-animation 3s forwards ease-in;
+}
+
+@keyframes name-animation {
+  80% {
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    fill: hsla(0, 0%, 83%, 0);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    fill: hsl(0, 0%, 83%);
+  }
+}

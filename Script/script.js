@@ -7,6 +7,7 @@ let pathA = null;
 let pathB = null;
 let pathC = null;
 let hamburger = null;
+const myName = document.querySelector("#my-name");
 
 appendSVG(menuBtn, "../images/svg/hamburger_menu.svg").then(() => {
   pathA = document.querySelector("#pathA");
@@ -14,6 +15,8 @@ appendSVG(menuBtn, "../images/svg/hamburger_menu.svg").then(() => {
   pathC = document.querySelector("#pathC");
   hamburger = document.querySelector("#hamburger");
 });
+
+appendSVG(myName, "../images/svg/my_name.svg");
 
 let isMenuOpen = false;
 
