@@ -27,18 +27,27 @@ body {
 
 .home h3 {
   margin: 0 0 20vh 0;
+  color: #a8a8a8;
 }
 
 #my-name-svg {
   stroke-dasharray: 170 10000;
   stroke-dashoffset: 170;
-  animation: name-animation 3s forwards ease-in;
+  animation: name-animation 2s forwards ease-in;
   animation-delay: 500ms;
   filter: drop-shadow(0 0 1rem hsl(34, 98%, 49%));
 }
 
 .slide-in-left {
   animation: slide-in-left 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.slide {
+  opacity: 0;
+}
+
+.delay {
+  animation-delay: 1.5s;
 }
 
 @keyframes name-animation {

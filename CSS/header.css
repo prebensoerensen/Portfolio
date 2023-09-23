@@ -6,7 +6,11 @@ header {
   top: 0;
   height: 5rem;
   z-index: 100;
-  background-color: hsl(0, 0%, 20%);
+  background: linear-gradient(
+    hsla(0, 0%, 20%) 40%,
+    hsla(0, 0%, 20%, 0.9) 70%,
+    hsla(0, 0%, 20%, 0)
+  );
 }
 .menu-wrapper {
   width: fit-content;
