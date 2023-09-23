@@ -3,6 +3,10 @@ import { appendSVG, updateClasses, delay, debounce } from "./functions.js";
 const menuBtn = document.querySelector("#ham-menu");
 const menu = document.querySelector("nav");
 const menuListItems = document.querySelectorAll(".menu-link");
+let pathA = null;
+let pathB = null;
+let pathC = null;
+let hamburger = null;
 
 appendSVG(menuBtn, "../images/svg/hamburger_menu.svg").then(() => {
   pathA = document.querySelector("#pathA");
