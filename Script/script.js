@@ -1,8 +1,13 @@
-import { appendSVG, updateClasses, delay } from "./functions.js";
+import { appendSVG, updateClasses, delay, debounce } from "./functions.js";
 
 const menuBtn = document.querySelector("#ham-menu");
 const menu = document.querySelector("nav");
-const menuListItem = document.querySelectorAll(".menu-link");
+const menuListItems = document.querySelectorAll(".menu-link");
+let pathA = null;
+let pathB = null;
+let pathC = null;
+let hamburger = null;
+const myName = document.querySelector("#my-name");
 
 appendSVG(menuBtn, "../images/svg/hamburger_menu.svg").then(() => {
   pathA = document.querySelector("#pathA");
@@ -11,9 +16,13 @@ appendSVG(menuBtn, "../images/svg/hamburger_menu.svg").then(() => {
   hamburger = document.querySelector("#hamburger");
 });
 
+appendSVG(myName, "../images/svg/my_name.svg");
+
 let isMenuOpen = false;
 
-menuBtn.addEventListener("click", async () => {
+menuBtn.addEventListener("click", debounce(toggleMenu, 1100));
+
+async function toggleMenu() {
   if (isMenuOpen === false) {
     updateClasses(pathA, ["pathA-to-open"], ["pathA-start", "pathA-to-closed"]);
 
@@ -51,16 +60,16 @@ menuBtn.addEventListener("click", async () => {
   if (isMenuOpen) {
     updateClasses(menu, ["right_fade_in"], ["right_fade_out"]);
     await delay(100);
-    menuListItem.forEach(async (item, i) => {
+    menuListItems.forEach(async (item, i) => {
       await delay(100 * i);
       updateClasses(item, ["right_fade_in"], ["right_fade_out"]);
     });
   } else {
-    menuListItem.forEach(async (item, i) => {
+    menuListItems.forEach(async (item, i) => {
       await delay(100 * i);
       updateClasses(item, ["right_fade_out"], ["right_fade_in"]);
     });
     await delay(500);
     updateClasses(menu, ["right_fade_out"], ["right_fade_in"]);
   }
-});
+}
