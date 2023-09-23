@@ -1,9 +1,12 @@
   <svg
-    width="400"
+    width="325"
     height="60"
     viewBox="0 0 1250 130"
     xmlns="http://www.w3.org/2000/svg"
+    aria-labelledby="nameTitle nameDesc" role="img"
   >
+   <title id="nameTitle">Preben Sørensen</title>
+   <desc id="nameDesc">A svg illustration of my name.</desc>
     <g
       id="my-name-svg"
       stroke-linecap="round"

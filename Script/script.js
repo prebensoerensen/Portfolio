@@ -8,6 +8,7 @@ let pathB = null;
 let pathC = null;
 let hamburger = null;
 const myName = document.querySelector("#my-name");
+const slideElements = document.querySelectorAll(".slide");
 
 appendSVG(menuBtn, "../images/svg/hamburger_menu.svg").then(() => {
   pathA = document.querySelector("#pathA");
@@ -16,7 +17,9 @@ appendSVG(menuBtn, "../images/svg/hamburger_menu.svg").then(() => {
   hamburger = document.querySelector("#hamburger");
 });
 
-appendSVG(myName, "../images/svg/my_name.svg");
+appendSVG(myName, "../images/svg/my_name.svg").then(() => {
+  window.scrollTo(0, 0);
+});
 
 let isMenuOpen = false;
 
@@ -73,3 +76,23 @@ async function toggleMenu() {
     updateClasses(menu, ["right_fade_out"], ["right_fade_in"]);
   }
 }
+
+const options = {
+  root: null,
+  threshold: 1,
+  rootMargin: "-25px",
+};
+
+const observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.toggle("slide-in-left");
+    observer.unobserve(entry.target);
+  });
+}, options);
+
+slideElements.forEach((element) => {
+  observer.observe(element);
+});

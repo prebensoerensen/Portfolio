@@ -5,7 +5,8 @@ header {
   position: sticky;
   top: 0;
   height: 5rem;
-  background: red;
+  z-index: 100;
+  background-color: hsl(0, 0%, 20%);
 }
 .menu-wrapper {
   width: fit-content;
@@ -38,11 +39,15 @@ ul {
 li {
   font-size: 1.5rem;
   transform: translateX(60vw);
-  transition: all 200ms;
+  transition: all 100ms;
+  text-shadow: 0 0 0.2rem hsla(0, 0%, 0%, 0.75);
 }
 
 li:hover {
   text-shadow: 0 0 0.5rem #fff;
+}
+li:active {
+  text-shadow: 0 0 0.8rem #fff;
 }
 
 .right_fade_in {
