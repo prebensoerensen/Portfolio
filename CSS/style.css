@@ -13,4 +13,52 @@ body {
   color: #f2f2f2;
   /* text-shadow: 0 0 1rem rgba(36, 36, 36, 0.8); */
   height: 300vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.home {
+  height: 100vh;
+  height: 100dvh;
+}
+
+#my-name-svg {
+  stroke-dasharray: 170 10000;
+  stroke-dashoffset: 170;
+  animation: name-animation 3s forwards ease-in;
+  animation-delay: 500ms;
+  filter: drop-shadow(0 0 1rem hsl(34, 88%, 44%));
+}
+
+.slide-in-bottom {
+  animation: slide-in-bottom 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes name-animation {
+  80% {
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    fill: hsla(0, 0%, 83%, 0);
+    filter: drop-shadow(0 0 0.5rem hsl(34, 88%, 44%));
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    fill: hsl(0, 0%, 83%);
+    filter: drop-shadow(0 0 0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(150vh) scaleY(2.5) scaleX(0.2);
+    transform-origin: 50% 100%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
 }
