@@ -67,6 +67,7 @@ async function toggleMenu() {
       await delay(50 * i);
       updateClasses(item, ["right_fade_in"], ["right_fade_out"]);
       await delay(550);
+      item.classList.remove("link-start-pos");
       item.classList.remove("right_fade_in");
     });
   } else {
@@ -109,7 +110,6 @@ const observer = new IntersectionObserver(function (entries, observer) {
     await delay(2050);
     entry.target.classList.remove("slide-in-left");
     entry.target.classList.remove("slide");
-    addEndStyles(entry.target);
     observer.unobserve(entry.target);
   });
 }, options);

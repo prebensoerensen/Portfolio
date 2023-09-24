@@ -44,10 +44,6 @@ ul {
   list-style-type: none;
 }
 
-li {
-  transform: translateX(60vw);
-}
-
 li button {
   background-color: transparent;
   border: none;
@@ -61,8 +57,13 @@ li button {
 li button:hover {
   text-shadow: 0 0 0.5rem #fff;
 }
+
 li button:active {
   text-shadow: 0 0 0.8rem #fff;
+}
+
+.link-start-pos {
+  transform: translateX(60vw);
 }
 
 .right_fade_in {
