@@ -56,8 +56,8 @@ p {
 }
 
 #about {
-  height: 100vh;
-  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
   max-width: 30rem;
   margin: 1rem;
   display: flex;
@@ -71,18 +71,34 @@ p {
 }
 
 #projects {
-  height: 100vh;
-  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #contact {
-  height: 100vh;
-  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 footer p {
   text-align: center;
   margin: 3rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.2rem;
+  background: hsl(0, 0%, 45%);
+}
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 17%);
 }
 .slide-in-left {
   animation: slide-in-left 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;

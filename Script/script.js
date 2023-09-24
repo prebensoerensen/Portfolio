@@ -80,15 +80,14 @@ async function toggleMenu() {
 menuListItems.forEach((item) => {
   const btn = item.querySelector(".menu-link-btn");
   btn.addEventListener("mousedown", function (e) {
-    const sectionId = e.target.getAttribute("data-section"); // get the section id from data attribute
-    const section = document.getElementById(sectionId); // get the section element
+    const sectionId = e.target.getAttribute("data-section");
+    const section = document.getElementById(sectionId);
     const sectionRect = section.getBoundingClientRect();
     window.scrollTo({
-      top: sectionRect.top + window.scrollY,
+      top: sectionRect.top + window.scrollY - 96,
       behavior: "smooth",
     });
 
-    // run toggleMenu with debouncer
     debounce(toggleMenu, 550)();
   });
 });
@@ -96,7 +95,7 @@ menuListItems.forEach((item) => {
 const options = {
   root: null,
   threshold: 1,
-  rootMargin: "0px 0px -50px 0px",
+  rootMargin: "0px 0px -25px 0px",
 };
 
 const observer = new IntersectionObserver(function (entries, observer) {
