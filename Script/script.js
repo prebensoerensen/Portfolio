@@ -14,14 +14,14 @@ const aboutSection = document.querySelector(".about");
 const projectsSection = document.querySelector(".projects");
 const contactSection = document.querySelector(".contact");
 
-appendSVG(menuBtn, "../images/svg/hamburger_menu.svg").then(() => {
+appendSVG(menuBtn, "../Images/svg/hamburger_menu.svg").then(() => {
   pathA = document.querySelector("#pathA");
   pathB = document.querySelector("#pathB");
   pathC = document.querySelector("#pathC");
   hamburger = document.querySelector("#hamburger");
 });
 
-appendSVG(myName, "../images/svg/my_name.svg").then(() => {
+appendSVG(myName, "../Images/svg/my_name.svg").then(() => {
   window.scrollTo(0, 0);
 });
 

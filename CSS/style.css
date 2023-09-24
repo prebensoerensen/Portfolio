@@ -1,5 +1,4 @@
 :root {
-  color: rgb(53, 53, 53);
   font-family: "Poppins", sans-serif;
 }
 
@@ -13,7 +12,7 @@ body {
   color: #e2e2e2;
   -webkit-font-smoothing: antialiased;
   text-shadow: 0.2rem 0.2rem 0.4rem hsla(0, 0%, 0%, 0.85);
-  background-image: url("../images/svg/waves.svg");
+  background-image: url("../Images/svg/waves.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
