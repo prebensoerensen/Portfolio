@@ -19,10 +19,10 @@
 }
 
 .hamburger-closed {
-  animation: grow 1.1s forwards ease-out;
+  animation: grow 550ms forwards ease-out;
 }
 .hamburger-open {
-  animation: shrink 1.1s forwards ease-out;
+  animation: shrink 550ms forwards ease-out;
 }
 
 .pathA-start {
@@ -41,33 +41,33 @@
 .pathA-to-open {
   stroke-dasharray: 400 5000;
   stroke-dashoffset: 5400;
-  animation: animate-pathA-to-open 1s forwards ease-in-out;
+  animation: animate-pathA-to-open 500ms forwards ease-in-out;
 }
 .pathB-to-open {
   stroke-dasharray: 400 5000;
   stroke-dashoffset: 5400;
-  animation: animate-pathB-to-open 0.5s forwards ease-in-out;
+  animation: animate-pathB-to-open 250ms forwards ease-in-out;
 }
 .pathC-to-open {
   stroke-dasharray: 400 5000;
   stroke-dashoffset: 5400;
-  animation: animate-pathC-to-open 1s forwards ease-in-out;
+  animation: animate-pathC-to-open 500ms forwards ease-in-out;
 }
 
 .pathA-to-closed {
   stroke-dasharray: 600 4700;
   stroke-dashoffset: 3130;
-  animation: animate-pathA-to-closed 1s forwards ease-in-out;
+  animation: animate-pathA-to-closed 500ms forwards ease-in-out;
 }
 .pathB-to-closed {
   stroke-dasharray: 3300 5000;
   stroke-dashoffset: 7600;
-  animation: animate-pathB-to-closed 0.5s forwards ease-in-out;
+  animation: animate-pathB-to-closed 250ms forwards ease-in-out;
 }
 .pathC-to-closed {
   stroke-dasharray: 600 4700;
   stroke-dashoffset: 2535;
-  animation: animate-pathC-to-closed 1s forwards ease-in-out;
+  animation: animate-pathC-to-closed 500ms forwards ease-in-out;
 }
 
 @keyframes animate-pathA-to-open {

@@ -66,11 +66,11 @@ li button:active {
 }
 
 .right_fade_in {
-  animation: right_fade_in 1s forwards ease-out;
+  animation: right_fade_in 500ms forwards ease-out;
 }
 
 .right_fade_out {
-  animation: right_fade_out 1s forwards ease-in;
+  animation: right_fade_out 500ms forwards ease-in;
 }
 
 @keyframes right_fade_in {

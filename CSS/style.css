@@ -34,8 +34,7 @@ h3 {
 p {
   letter-spacing: 0.05rem;
 }
-
-.home {
+#home {
   height: 100vh;
   height: 100dvh;
   display: flex;
@@ -44,7 +43,7 @@ p {
   align-items: center;
 }
 
-.home h3 {
+#home h3 {
   margin: 0 0 20vh 0;
 }
 
@@ -56,7 +55,7 @@ p {
   filter: drop-shadow(0 0 1rem hsl(34, 98%, 49%));
 }
 
-.about {
+#about {
   height: 100vh;
   height: 100dvh;
   max-width: 30rem;
@@ -67,16 +66,16 @@ p {
   align-items: center;
 }
 
-.about p {
+#about p {
   margin-top: 1rem;
 }
 
-.projects {
+#projects {
   height: 100vh;
   height: 100dvh;
 }
 
-.contact {
+#contact {
   height: 100vh;
   height: 100dvh;
 }

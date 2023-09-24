@@ -9,10 +9,6 @@ let pathC = null;
 let hamburger = null;
 const myName = document.querySelector("#my-name");
 const slideElements = document.querySelectorAll(".slide");
-const homeSection = document.querySelector(".home");
-const aboutSection = document.querySelector(".about");
-const projectsSection = document.querySelector(".projects");
-const contactSection = document.querySelector(".contact");
 
 appendSVG(menuBtn, "../Images/svg/hamburger_menu.svg").then(() => {
   pathA = document.querySelector("#pathA");
@@ -27,7 +23,7 @@ appendSVG(myName, "../Images/svg/my_name.svg").then(() => {
 
 let isMenuOpen = false;
 
-menuBtn.addEventListener("mousedown", debounce(toggleMenu, 1100));
+menuBtn.addEventListener("mousedown", debounce(toggleMenu, 550));
 
 async function toggleMenu() {
   if (isMenuOpen === false) {
@@ -66,20 +62,36 @@ async function toggleMenu() {
   }
   if (isMenuOpen) {
     updateClasses(menu, ["right_fade_in"], ["right_fade_out"]);
-    await delay(100);
+    await delay(50);
     menuListItems.forEach(async (item, i) => {
-      await delay(100 * i);
+      await delay(50 * i);
       updateClasses(item, ["right_fade_in"], ["right_fade_out"]);
     });
   } else {
     menuListItems.forEach(async (item, i) => {
-      await delay(100 * i);
+      await delay(50 * i);
       updateClasses(item, ["right_fade_out"], ["right_fade_in"]);
     });
-    await delay(500);
+    await delay(250);
     updateClasses(menu, ["right_fade_out"], ["right_fade_in"]);
   }
 }
+
+menuListItems.forEach((item) => {
+  const btn = item.querySelector(".menu-link-btn");
+  btn.addEventListener("mousedown", function (e) {
+    const sectionId = e.target.getAttribute("data-section"); // get the section id from data attribute
+    const section = document.getElementById(sectionId); // get the section element
+    const sectionRect = section.getBoundingClientRect();
+    window.scrollTo({
+      top: sectionRect.top + window.scrollY,
+      behavior: "smooth",
+    });
+
+    // run toggleMenu with debouncer
+    debounce(toggleMenu, 550)();
+  });
+});
 
 const options = {
   root: null,

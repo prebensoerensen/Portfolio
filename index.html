@@ -23,21 +23,33 @@
         <button id="ham-menu"></button>
         <nav>
           <ul>
-            <li class="menu-link"><button>Hjem</button></li>
-            <li class="menu-link"><button>Om meg</button></li>
-            <li class="menu-link"><button>Prosjekter</button></li>
-            <li class="menu-link"><button>Kontakt meg</button></li>
+            <li class="menu-link">
+              <button class="menu-link-btn" data-section="home">Hjem</button>
+            </li>
+            <li class="menu-link">
+              <button class="menu-link-btn" data-section="about">Om meg</button>
+            </li>
+            <li class="menu-link">
+              <button class="menu-link-btn" data-section="projects">
+                Prosjekter
+              </button>
+            </li>
+            <li class="menu-link">
+              <button class="menu-link-btn" data-section="contact">
+                Kontakt meg
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="home">
+      <section id="home">
         <div id="my-name"></div>
         <h3 class="slide delay">Frontend-utvikler | Designer</h3>
       </section>
-      <section class="about">
+      <section id="about">
         <article>
           <h2 class="slide">Om meg</h2>
           <p class="slide">Hei! Jeg heter Preben.</p>
@@ -61,10 +73,10 @@
           </p>
         </article>
       </section>
-      <section class="projects">
+      <section id="projects">
         <h2 class="slide">Prosjekter</h2>
       </section>
-      <section class="contact">
+      <section id="contact">
         <h2>Kontakt meg</h2>
       </section>
     </main>
