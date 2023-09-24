@@ -51,10 +51,10 @@ li {
   text-shadow: 0 0 0.2rem hsla(0, 0%, 0%, 0.75);
 }
 
-li:hover {
+li button:hover {
   text-shadow: 0 0 0.5rem #fff;
 }
-li:active {
+li button:active {
   text-shadow: 0 0 0.8rem #fff;
 }
 
