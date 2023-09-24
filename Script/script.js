@@ -9,6 +9,10 @@ let pathC = null;
 let hamburger = null;
 const myName = document.querySelector("#my-name");
 const slideElements = document.querySelectorAll(".slide");
+const homeSection = document.querySelector(".home");
+const aboutSection = document.querySelector(".about");
+const projectsSection = document.querySelector(".projects");
+const contactSection = document.querySelector(".contact");
 
 appendSVG(menuBtn, "../images/svg/hamburger_menu.svg").then(() => {
   pathA = document.querySelector("#pathA");

@@ -86,7 +86,7 @@ footer p {
 }
 
 .delay {
-  animation-delay: 1.5s;
+  animation-delay: 2s;
 }
 
 @keyframes name-animation {
