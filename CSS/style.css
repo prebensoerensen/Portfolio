@@ -10,12 +10,13 @@ html {
 }
 body {
   background: hsl(0, 0%, 20%);
-  color: #f2f2f2;
+  color: #e2e2e2;
   height: 300vh;
   -webkit-font-smoothing: antialiased;
   text-shadow: 0.2rem 0.2rem 0.4rem hsla(0, 0%, 0%, 0.85);
   background-image: url("../images/svg/waves.svg");
-  background-size: auto 100svh;
+  /* background-size: auto 100dvh; */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -72,18 +73,13 @@ body {
 
 @keyframes slide-in-left {
   0% {
-    transform: translateX(-100vw) scale(0.1);
+    transform: translateX(-100vw);
     filter: blur(0.3rem);
     opacity: 0;
   }
   100% {
-    transform: translateX(0) scale(1);
+    transform: translateX(0);
     filter: blur(0);
     opacity: 1;
-  }
-}
-@media (orientation: landscape) {
-  body {
-    background-size: 100svw auto;
   }
 }
