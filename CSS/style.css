@@ -27,6 +27,15 @@ main {
   align-items: center;
 }
 
+h2,
+h3 {
+  color: #8400ff;
+}
+
+p {
+  letter-spacing: 0.05rem;
+}
+
 .home {
   height: 100vh;
   height: 100dvh;
@@ -38,7 +47,6 @@ main {
 
 .home h3 {
   margin: 0 0 20vh 0;
-  color: #a8a8a8;
 }
 
 #my-name-svg {
@@ -60,8 +68,14 @@ main {
   margin-top: 1rem;
 }
 
+.projects {
+  height: 100vh;
+  height: 100dvh;
+}
+
 footer p {
   text-align: center;
+  margin: 3rem;
 }
 .slide-in-left {
   animation: slide-in-left 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
