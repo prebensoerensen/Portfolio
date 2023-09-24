@@ -80,7 +80,7 @@ async function toggleMenu() {
 const options = {
   root: null,
   threshold: 1,
-  rootMargin: "-25px",
+  // rootMargin: "-50px",
 };
 
 const observer = new IntersectionObserver(function (entries, observer) {
