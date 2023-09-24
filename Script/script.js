@@ -107,7 +107,7 @@ const observer = new IntersectionObserver(function (entries, observer) {
       return;
     }
     entry.target.classList.add("slide-in-left");
-    await delay(2050);
+    await delay(1050);
     entry.target.classList.remove("slide-in-left");
     entry.target.classList.remove("slide");
     observer.unobserve(entry.target);
