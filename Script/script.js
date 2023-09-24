@@ -23,7 +23,7 @@ appendSVG(myName, "../images/svg/my_name.svg").then(() => {
 
 let isMenuOpen = false;
 
-menuBtn.addEventListener("click", debounce(toggleMenu, 1100));
+menuBtn.addEventListener("mousedown", debounce(toggleMenu, 1100));
 
 async function toggleMenu() {
   if (isMenuOpen === false) {

@@ -6,6 +6,16 @@
   filter: drop-shadow(0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.7));
   width: 5rem;
   height: 5rem;
+  transition: all 200ms;
+}
+
+#hamburger:hover {
+  filter: drop-shadow(0 0 0.5rem hsl(0, 0%, 100%));
+  cursor: pointer;
+}
+
+#hamburger:active {
+  filter: drop-shadow(0 0 1rem hsl(0, 0%, 100%));
 }
 
 .hamburger-closed {
