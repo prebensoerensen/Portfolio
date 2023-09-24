@@ -100,16 +100,19 @@ footer p {
 ::-webkit-scrollbar-track {
   background: hsl(0, 0%, 17%);
 }
-.slide-in-left {
-  animation: slide-in-left 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-}
 
 .slide {
   opacity: 0;
 }
 
-.delay {
+.delayed-slide {
+  opacity: 0;
+  animation: slide-in-left 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
   animation-delay: 2s;
+}
+
+.slide-in-left {
+  animation: slide-in-left 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 @keyframes name-animation {

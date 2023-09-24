@@ -66,6 +66,8 @@ async function toggleMenu() {
     menuListItems.forEach(async (item, i) => {
       await delay(50 * i);
       updateClasses(item, ["right_fade_in"], ["right_fade_out"]);
+      await delay(550);
+      item.classList.remove("right_fade_in");
     });
   } else {
     menuListItems.forEach(async (item, i) => {
@@ -99,11 +101,15 @@ const options = {
 };
 
 const observer = new IntersectionObserver(function (entries, observer) {
-  entries.forEach((entry) => {
+  entries.forEach(async (entry) => {
     if (!entry.isIntersecting) {
       return;
     }
-    entry.target.classList.toggle("slide-in-left");
+    entry.target.classList.add("slide-in-left");
+    await delay(2050);
+    entry.target.classList.remove("slide-in-left");
+    entry.target.classList.remove("slide");
+    addEndStyles(entry.target);
     observer.unobserve(entry.target);
   });
 }, options);
