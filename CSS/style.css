@@ -25,7 +25,9 @@ main {
   justify-content: center;
   align-items: center;
 }
-
+h3 {
+  font-size: 1.1rem;
+}
 h2,
 h3 {
   color: #8400ff;
@@ -45,6 +47,10 @@ p {
 
 #home h3 {
   margin: 0 0 20vh 0;
+}
+
+#my-name-svg-main {
+  width: 20rem;
 }
 
 #my-name-svg {
@@ -148,5 +154,11 @@ footer p {
     transform: translateX(0);
     filter: blur(0);
     opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #my-name-svg-main {
+    width: 40rem;
   }
 }

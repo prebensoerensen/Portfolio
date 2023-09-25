@@ -1,6 +1,4 @@
-  <svg
-    width="325"
-    height="60"
+  <svg id="my-name-svg-main"
     viewBox="0 0 1250 130"
     xmlns="http://www.w3.org/2000/svg"
     aria-labelledby="nameTitle nameDesc" role="img"
