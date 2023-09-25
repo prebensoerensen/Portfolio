@@ -26,6 +26,7 @@ let isMenuOpen = false;
 menuBtn.addEventListener("mousedown", debounce(toggleMenu, 550));
 
 async function toggleMenu() {
+  await delay(250);
   if (isMenuOpen === false) {
     updateClasses(pathA, ["pathA-to-open"], ["pathA-start", "pathA-to-closed"]);
 
@@ -82,7 +83,9 @@ async function toggleMenu() {
 
 menuListItems.forEach((item) => {
   const btn = item.querySelector(".menu-link-btn");
-  btn.addEventListener("mousedown", function (e) {
+  btn.addEventListener("mousedown", async function (e) {
+    debounce(toggleMenu, 550)();
+    await delay(550);
     const sectionId = e.target.getAttribute("data-section");
     const section = document.getElementById(sectionId);
     const sectionRect = section.getBoundingClientRect();
@@ -90,8 +93,6 @@ menuListItems.forEach((item) => {
       top: sectionRect.top + window.scrollY - 96,
       behavior: "smooth",
     });
-
-    debounce(toggleMenu, 550)();
   });
 });
 
