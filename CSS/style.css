@@ -54,8 +54,8 @@ p {
 }
 
 #my-name-svg {
-  stroke-dasharray: 270 10000;
-  stroke-dashoffset: 270;
+  stroke-dasharray: 170 10000;
+  stroke-dashoffset: 170;
   animation: name-animation 2s forwards ease-in;
   animation-delay: 500ms;
   filter: drop-shadow(0 0 1rem hsl(34, 98%, 49%));
@@ -160,5 +160,10 @@ footer p {
 @media only screen and (min-width: 600px) {
   #my-name-svg-main {
     width: 40rem;
+  }
+
+  #my-name-svg {
+    stroke-dasharray: 270 10000;
+    stroke-dashoffset: 270;
   }
 }
