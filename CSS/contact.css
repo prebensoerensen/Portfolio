@@ -24,14 +24,16 @@ textarea {
   margin: 0.5rem 0;
   border: none;
   border-radius: 0.5rem;
-  background: #8400ff;
+  /* background: #8400ff; */
+  background: #3de12a;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   transition: all 500ms;
 }
 
 .form-btn:hover {
-  box-shadow: 0 0 1rem #9523ff;
+  /* box-shadow: 0 0 1rem #9523ff; */
+  box-shadow: 0 0 1rem #67fb56;
   transform: translateY(-0.5rem);
   transition: all 200ms;
 }

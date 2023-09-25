@@ -13,8 +13,16 @@ header {
   );
 }
 
+#logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem 3rem;
+}
+
 #logo {
-  margin: 0.5rem 0 0.5rem 3rem;
+  width: 1.3rem;
 }
 .menu-wrapper {
   width: fit-content;
