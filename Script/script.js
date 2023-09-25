@@ -98,7 +98,7 @@ menuListItems.forEach((item) => {
 
 const options = {
   root: null,
-  threshold: 1,
+  threshold: 0.75,
   rootMargin: "0px 0px -25px 0px",
 };
 
@@ -108,7 +108,7 @@ const observer = new IntersectionObserver(function (entries, observer) {
       return;
     }
     entry.target.classList.add("slide-in-left");
-    await delay(1050);
+    await delay(1550);
     entry.target.classList.remove("slide-in-left");
     entry.target.classList.remove("slide");
     observer.unobserve(entry.target);

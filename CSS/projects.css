@@ -13,7 +13,7 @@
   background: radial-gradient(hsl(0, 0%, 38%), hsl(0, 0%, 27%));
   border-radius: 0.5rem;
   padding-bottom: 0.5rem;
-  box-shadow: 0.2rem 0.2rem 0.5rem #aaaaaa93;
+  box-shadow: 0.2rem 0.2rem 0.7rem 0.1rem #000000dc;
 }
 
 .card > img {
