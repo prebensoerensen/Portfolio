@@ -54,8 +54,8 @@ p {
 }
 
 #my-name-svg {
-  stroke-dasharray: 170 10000;
-  stroke-dashoffset: 170;
+  stroke-dasharray: 270 10000;
+  stroke-dashoffset: 270;
   animation: name-animation 2s forwards ease-in;
   animation-delay: 500ms;
   filter: drop-shadow(0 0 1rem hsl(34, 98%, 49%));
