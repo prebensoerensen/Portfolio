@@ -58,7 +58,7 @@ p {
   stroke-dashoffset: 170;
   animation: name-animation 2s forwards ease-in;
   animation-delay: 500ms;
-  filter: drop-shadow(0 0 1rem hsl(34, 98%, 49%));
+  
 }
 
 #about {
