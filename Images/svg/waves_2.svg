@@ -4,7 +4,7 @@
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
 <!--Blur the shadow-->
-      <feOffset dx="5" dy="5" result="offsetblur"/>
+      <feOffset dx="0" dy="3" result="offsetblur"/>
 <!--Offset the shadow-->
       <feMerge>
         <feMergeNode/>
@@ -29,7 +29,7 @@
         </path>
         <path style="fill:#1C1C1C; filter:url(#shadow);" d="M0 235c40 0 105 11 168 34 103 40 167 71 232 81s135-15 200-45c70-25 131-70 200-70
 c40 0 105 11 168 34 103 40 167 71 232 81s135-15 200-45c70-25 131-70 200-70V500H0Z">
-          <animateTransform attributeName="transform" type="translate" dur="178s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -27; 0 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="178s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -15; 0 0"/>
         </path>
         <path style="fill:#171717; filter:url(#shadow);" d="M0 365c33 0 98 1 173 13 103 18 161 56 226 68s152-2 201-26c60-32 136-55 200-55
 c33 0 98 1 173 13 103 18 161 56 226 68s152-2 201-26c60-32 136-55 200-55V550H0Z">
