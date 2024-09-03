@@ -4,37 +4,37 @@
       <g>
         <rect y="-0.5" style="fill:#121212;" width="800" height="500"/>
         <path style="fill:#2B2B2B;" d="M0 170M0 170C100 170 110 275 221 240S357 344 471 330 670 170 800 170C900 170 910 275 1021 240S1157 344 1271 330 1470 170 1600 170V600H0Z">
-          <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.5;1" values="0 0; -400 50; -800 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="154s" repeatCount="indefinite" keyTimes="0;0.5;1" values="0 0; -400 38; -800 0"/>
         </path>
         <path style="fill:#262626;" d="M0 255c50 0 100 70 170 45s130-60 200-65c65-5 130 45 200 65s195-45 230-45c50 0 100 70 170 45s130-60 200-65c65-5 130 45 200 65s195-45 230-45V500H0Z">
-          <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -50; 0 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="172s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -42; 0 0"/>
         </path>
         <path style="fill:#212121;" d="M0 500V330c80 0 98 91 197 91s99-49 165-49 125 53 193 49c109 3 165-91 245-91s98 91 197 91 99-49 165-49 125 53 193 49c109 3 165-91 245-91V500Z">
-          <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.5;1" values="0 0; -400 50; -800 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="168s" repeatCount="indefinite" keyTimes="0;0.5;1" values="0 0; -400 32; -800 0"/>
         </path>
         <path style="fill:#1C1C1C;" d="M0 235c40 0 105 11 168 34 103 40 167 71 232 81s135-15 200-45c70-25 131-70 200-70
 c40 0 105 11 168 34 103 40 167 71 232 81s135-15 200-45c70-25 131-70 200-70V500H0Z">
-          <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -50; 0 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="139s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -27; 0 0"/>
         </path>
         <path style="fill:#171717;" d="M0 365c33 0 98 1 173 13 103 18 161 56 226 68s152-2 201-26c60-32 136-55 200-55
 c33 0 98 1 173 13 103 18 161 56 226 68s152-2 201-26c60-32 136-55 200-55V550H0Z">
-          <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.5;1" values="0 0; -400 50; -800 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="159s" repeatCount="indefinite" keyTimes="0;0.5;1" values="0 0; -400 29; -800 0"/>
         </path>
         <path style="fill:#121212;" d="M0 410c188 0 172-110 400-110S611 410 800 410c188 0 172-110 400-110s211 110 400 110V550H0Z">
-          <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -50; 0 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="133s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -31; 0 0"/>
         </path>
         <path style="fill:#0D0D0D;" d="M0 350c67 0 133 35 200 37s133-13 200-10 129 24 200 33 134-60 200-60
 c67 0 133 35 200 37s133-13 200-10 129 24 200 33 134-60 200-60V550H0Z">
-          <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.5;1" values="0 0; -400 50; -800 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="165s" repeatCount="indefinite" keyTimes="0;0.5;1" values="0 0; -400 40; -800 0"/>
         </path>
         <path style="fill:#080808;" d="M0 443c67 0 133-47 200-52s133 7 200 12 133 5 200 12 133 28 200 28 133-47 200-52 133 7 200 12 133 5 200 12 133 28 200 28V550H0Z">
-          <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -50; 0 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="143s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -36; 0 0"/>
         </path>
         <path style="fill:#030303;" d="M0 450c67 0 133 12 200 6s133-24 200-36 133-17 200-13 133 43 200 43 133 12 200 6 133-24 200-36 133-17 200-13 133 43 200 43V550H0Z">
-          <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.5;1" values="0 0; -400 50; -800 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="121s" repeatCount="indefinite" keyTimes="0;0.5;1" values="0 0; -400 28; -800 0"/>
         </path>
         <path style="fill:#000000;" d="M0 434c67 0 133 3 200 6s133 7 200 5 133-8 200-11 133 0 200 0 133 3 200 6 133 7 200 5 133-8 200-11 133 0 200 0V550H0Z">
-          <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -50; 0 0"/>
+          <animateTransform attributeName="transform" type="translate" dur="178s" repeatCount="indefinite" keyTimes="0;0.5;1" values="-800 0; -400 -41; 0 0"/>
           </path>
       </g>
     </g>
