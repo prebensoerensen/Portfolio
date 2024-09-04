@@ -17,7 +17,6 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  transform: translateZ(0);
 }
 
 main {
