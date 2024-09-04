@@ -1,4 +1,14 @@
-export function appendSVG(element, url) {
+/**
+ * Appends an SVG element to a given HTML element by fetching the SVG from a URL.
+ *
+ * @param {Element} element - The DOM element to which the fetched SVG will be appended.
+ * @param {string} url - The URL of the SVG to fetch.
+ * @returns {Promise<void>} A promise that resolves when the SVG is successfully appended, or rejects if an error occurs.
+ *
+ * @example
+ * appendSVG(document.getElementById('svgContainer'), '/path/to/image.svg');
+ */
+export async function appendSVG(element: Element, url: string): Promise<void> {
   return fetch(url)
     .then((response) => response.text())
     .then((svgContent) => {
@@ -22,12 +32,16 @@ export function appendSVG(element, url) {
  * @param {string[]} [remove=[]] - an array of class names to remove from the element.
  * @returns {void}
  */
-export function updateClasses(element, add = [], remove = []) {
+export function updateClasses(
+  element: Element,
+  add: string[] = [],
+  remove: string[] = []
+): void {
   add.forEach((cls) => element.classList.add(cls));
   remove.forEach((cls) => element.classList.remove(cls));
 }
 
-export function delay(ms) {
+export function delay(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
@@ -40,11 +54,14 @@ export function delay(ms) {
  * @param {number} wait - The time, in milliseconds, to wait before allowing the function to be executed again.
  * @returns {Function} Returns the debounced function.
  */
-export function debounce(func, wait) {
-  let timeout;
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: ReturnType<typeof setTimeout>;
   let isWaiting = false;
 
-  return function (...args) {
+  return function (this: any, ...args: Parameters<T>): void {
     const context = this;
 
     if (!isWaiting) {
