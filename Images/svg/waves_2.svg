@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
   <style>
     .wave-path {
-      transform: translateZ(0); /* Force GPU acceleration */
+      transform: translateZ(0); /* Force GPU acceleration on Safari Browsers*/
       filter: drop-shadow(2px -1px 3px #000);
     }
 
