@@ -10,20 +10,23 @@ let hamburger = null;
 const myName = document.querySelector("#my-name");
 const slideElements = document.querySelectorAll(".slide");
 
-appendSVG(menuBtn, "./Images/svg/hamburger_menu.svg").then(() => {
-  pathA = document.querySelector("#pathA");
-  pathB = document.querySelector("#pathB");
-  pathC = document.querySelector("#pathC");
-  hamburger = document.querySelector("#hamburger");
-});
+if (menuBtn) {
+  appendSVG(menuBtn, "./Images/svg/hamburger_menu.svg").then(() => {
+    pathA = document.querySelector("#pathA");
+    pathB = document.querySelector("#pathB");
+    pathC = document.querySelector("#pathC");
+    hamburger = document.querySelector("#hamburger");
+  });
+}
 
-appendSVG(myName, "./Images/svg/my_name.svg").then(() => {
-  window.scrollTo(0, 0);
-});
+if (myName)
+  appendSVG(myName, "./Images/svg/my_name.svg").then(() => {
+    window.scrollTo(0, 0);
+  });
+
+menuBtn?.addEventListener("mousedown", debounce(toggleMenu, 550));
 
 let isMenuOpen = false;
-
-menuBtn.addEventListener("mousedown", debounce(toggleMenu, 550));
 
 async function toggleMenu() {
   await delay(250);
