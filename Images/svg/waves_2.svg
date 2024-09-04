@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <filter id="waveShadow" x="-10%" y="-10%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="2" dy="-1" result="offsetBlur"/>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    
+  </defs>
   <style>
     .wave-path {
       transform: translateZ(0); /* Force GPU acceleration */
-      filter: drop-shadow(2px -1px 3px #000);
+      filter: url(#waveShadow); /* Apply shadow filter */
     }
 
     .moving-path1 {
