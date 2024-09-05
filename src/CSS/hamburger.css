@@ -1,7 +1,7 @@
 #hamburger {
   position: fixed;
   top: 0;
-  right: 5%;
+  right: 1rem;
   z-index: 9999;
   filter: drop-shadow(0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.7));
   width: 5rem;

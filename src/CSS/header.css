@@ -32,7 +32,7 @@ nav {
   top: 0;
   right: 0;
   height: 100vh;
-  width: clamp(15rem, 60vw, 20rem);
+  width: clamp(15rem, 60vw, 30rem);
   background: #4f4e4ea9;
   backdrop-filter: blur(0.4rem);
   z-index: 100;
