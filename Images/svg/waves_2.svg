@@ -5,7 +5,7 @@
     }
 
     .moving-path1 {
-      animation: move1 200s linear infinite;
+      animation: move1 200s linear -5s infinite;
       fill: #2B2B2B;
     }
 
@@ -25,7 +25,7 @@
     }
 
     .moving-path2 {
-      animation: move2 190s linear infinite;
+      animation: move2 190s linear -10s infinite;
       fill: #262626;
     }
 
@@ -45,7 +45,7 @@
     }
 
     .moving-path3 {
-      animation: move3 180s linear infinite;
+      animation: move3 180s linear -15s infinite;
       fill: #212121;
     }
 
@@ -65,7 +65,7 @@
     }
 
     .moving-path4 {
-      animation: move4 170s linear infinite;
+      animation: move4 170s linear -20s infinite;
       fill: #1C1C1C;
     }
 
@@ -85,7 +85,7 @@
     }
 
     .moving-path5 {
-      animation: move5 160s linear infinite;
+      animation: move5 160s linear -25s infinite;
       fill: #171717;
     }
 
@@ -105,7 +105,7 @@
     }
 
     .moving-path6 {
-      animation: move6 150s linear infinite;
+      animation: move6 150s linear -5s infinite;
       fill: #121212;
     }
 
@@ -125,7 +125,7 @@
     }
 
     .moving-path7 {
-      animation: move7 140s linear infinite;
+      animation: move7 140s linear -10s infinite;
       fill: #0D0D0D;
     }
 
@@ -145,7 +145,7 @@
     }
 
     .moving-path8 {
-      animation: move8 120s linear infinite;
+      animation: move8 120s linear -15s infinite;
       fill: #080808;
     }
 
@@ -165,7 +165,7 @@
     }
 
     .moving-path9 {
-      animation: move9 110s linear infinite;
+      animation: move9 110s linear -20s infinite;
       fill: #030303;
     }
 
@@ -185,7 +185,7 @@
     }
 
     .moving-path10 {
-      animation: move10 100s linear infinite;
+      animation: move10 100s linear -25s infinite;
       fill: #000000;
     }
 
@@ -196,7 +196,7 @@
       }
       50% {
         transform: translate(-400px, -41px);
-        d: path("M0 400C67 434 140 416 199 428S335 474 411 464 524 428 579 418 654 474 754 477 909 430 974 429 1130 479 1223 470 1333 437 1424 420 1535 431 1600 400V600H0Z");
+        d: path("M0 434C67 434 133 437 181 453S337 460 419 443 535 418 621 436 698 440 762 434 933 450 1019 438 1139 454 1209 456 1301 446 1381 435 1533 434 1600 434V600H0Z");
       }
       100% {
         transform: translate(0, 0);
