@@ -1,10 +1,14 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.appendSVG = appendSVG;
-exports.updateClasses = updateClasses;
-exports.delay = delay;
-exports.debounce = debounce;
-function appendSVG(element, url) {
+/**
+ * Appends an SVG element to a given HTML element by fetching the SVG from a URL.
+ *
+ * @param {Element} element - The DOM element to which the fetched SVG will be appended.
+ * @param {string} url - The URL of the SVG to fetch.
+ * @returns {Promise<void>} A promise that resolves when the SVG is successfully appended, or rejects if an error occurs.
+ *
+ * @example
+ * appendSVG(document.getElementById('svgContainer'), '/path/to/image.svg');
+ */
+export async function appendSVG(element, url) {
     return fetch(url)
         .then((response) => response.text())
         .then((svgContent) => {
@@ -24,11 +28,11 @@ function appendSVG(element, url) {
  * @param {string[]} [remove=[]] - an array of class names to remove from the element.
  * @returns {void}
  */
-function updateClasses(element, add = [], remove = []) {
+export function updateClasses(element, add = [], remove = []) {
     add.forEach((cls) => element.classList.add(cls));
     remove.forEach((cls) => element.classList.remove(cls));
 }
-function delay(ms) {
+export function delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 /**
@@ -40,7 +44,7 @@ function delay(ms) {
  * @param {number} wait - The time, in milliseconds, to wait before allowing the function to be executed again.
  * @returns {Function} Returns the debounced function.
  */
-function debounce(func, wait) {
+export function debounce(func, wait) {
     let timeout;
     let isWaiting = false;
     return function (...args) {

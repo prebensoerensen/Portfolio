@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const functions_js_1 = require("./functions.js");
+import { appendSVG, updateClasses, delay, debounce } from "./functions.js";
 const menuBtn = document.querySelector("#ham-menu");
 const menu = document.querySelector("nav");
 const menuListItems = document.querySelectorAll(".menu-link");
@@ -10,62 +8,78 @@ let pathC = null;
 let hamburger = null;
 const myName = document.querySelector("#my-name");
 const slideElements = document.querySelectorAll(".slide");
-(0, functions_js_1.appendSVG)(menuBtn, "./Images/svg/hamburger_menu.svg").then(() => {
-    pathA = document.querySelector("#pathA");
-    pathB = document.querySelector("#pathB");
-    pathC = document.querySelector("#pathC");
-    hamburger = document.querySelector("#hamburger");
-});
-(0, functions_js_1.appendSVG)(myName, "./Images/svg/my_name.svg").then(() => {
-    window.scrollTo(0, 0);
-});
+if (menuBtn) {
+    appendSVG(menuBtn, "./Images/svg/hamburger_menu.svg").then(() => {
+        pathA = document.querySelector("#pathA");
+        pathB = document.querySelector("#pathB");
+        pathC = document.querySelector("#pathC");
+        hamburger = document.querySelector("#hamburger");
+    });
+}
+if (myName)
+    appendSVG(myName, "./Images/svg/my_name.svg").then(() => {
+        window.scrollTo(0, 0);
+    });
+menuBtn?.addEventListener("mousedown", debounce(toggleMenu, 550));
 let isMenuOpen = false;
-menuBtn.addEventListener("mousedown", (0, functions_js_1.debounce)(toggleMenu, 550));
 async function toggleMenu() {
-    await (0, functions_js_1.delay)(250);
+    await delay(250);
+    if (!pathA || !pathB || !pathC || !hamburger)
+        return;
     if (isMenuOpen === false) {
-        (0, functions_js_1.updateClasses)(pathA, ["pathA-to-open"], ["pathA-start", "pathA-to-closed"]);
-        (0, functions_js_1.updateClasses)(pathB, ["pathB-to-open"], ["pathB-start", "pathB-to-closed"]);
-        (0, functions_js_1.updateClasses)(pathC, ["pathC-to-open"], ["pathC-start", "pathC-to-closed"]);
-        (0, functions_js_1.updateClasses)(hamburger, ["hamburger-open"], ["hamburger-closed"]);
+        updateClasses(pathA, ["pathA-to-open"], ["pathA-start", "pathA-to-closed"]);
+        updateClasses(pathB, ["pathB-to-open"], ["pathB-start", "pathB-to-closed"]);
+        updateClasses(pathC, ["pathC-to-open"], ["pathC-start", "pathC-to-closed"]);
+        updateClasses(hamburger, ["hamburger-open"], ["hamburger-closed"]);
         isMenuOpen = true;
     }
     else {
         if (isMenuOpen === true) {
-            (0, functions_js_1.updateClasses)(pathA, ["pathA-to-closed"], ["pathA-start", "pathA-to-open"]);
-            (0, functions_js_1.updateClasses)(pathB, ["pathB-to-closed"], ["pathB-start", "pathB-to-open"]);
-            (0, functions_js_1.updateClasses)(pathC, ["pathC-to-closed"], ["pathC-start", "pathC-to-open"]);
-            (0, functions_js_1.updateClasses)(hamburger, ["hamburger-closed"], ["hamburger-open"]);
+            updateClasses(pathA, ["pathA-to-closed"], ["pathA-start", "pathA-to-open"]);
+            updateClasses(pathB, ["pathB-to-closed"], ["pathB-start", "pathB-to-open"]);
+            updateClasses(pathC, ["pathC-to-closed"], ["pathC-start", "pathC-to-open"]);
+            updateClasses(hamburger, ["hamburger-closed"], ["hamburger-open"]);
         }
         isMenuOpen = false;
     }
+    if (!menu)
+        return;
     if (isMenuOpen) {
-        (0, functions_js_1.updateClasses)(menu, ["right_fade_in"], ["right_fade_out"]);
-        await (0, functions_js_1.delay)(50);
+        updateClasses(menu, ["right_fade_in"], ["right_fade_out"]);
+        await delay(50);
         menuListItems.forEach(async (item, i) => {
-            await (0, functions_js_1.delay)(50 * i);
-            (0, functions_js_1.updateClasses)(item, ["right_fade_in"], ["right_fade_out"]);
-            await (0, functions_js_1.delay)(550);
+            await delay(50 * i);
+            updateClasses(item, ["right_fade_in"], ["right_fade_out"]);
+            await delay(550);
             item.classList.remove("link-start-pos");
             item.classList.remove("right_fade_in");
         });
     }
     else {
         menuListItems.forEach(async (item, i) => {
-            await (0, functions_js_1.delay)(50 * i);
-            (0, functions_js_1.updateClasses)(item, ["right_fade_out"], ["right_fade_in"]);
+            await delay(50 * i);
+            updateClasses(item, ["right_fade_out"], ["right_fade_in"]);
         });
-        await (0, functions_js_1.delay)(250);
-        (0, functions_js_1.updateClasses)(menu, ["right_fade_out"], ["right_fade_in"]);
+        await delay(250);
+        updateClasses(menu, ["right_fade_out"], ["right_fade_in"]);
     }
 }
 menuListItems.forEach((item) => {
     const btn = item.querySelector(".menu-link-btn");
+    if (!btn)
+        return;
     btn.addEventListener("mousedown", async function (e) {
-        (0, functions_js_1.debounce)(toggleMenu, 550)();
-        await (0, functions_js_1.delay)(550);
-        const sectionId = e.target.getAttribute("data-section");
+        const target = e.target;
+        if (!target)
+            return;
+        debounce(toggleMenu, 550)();
+        await delay(550);
+        const sectionId = target.getAttribute("data-section");
+        if (!sectionId)
+            return;
         const section = document.getElementById(sectionId);
+        if (!section)
+            return;
         const sectionRect = section.getBoundingClientRect();
         window.scrollTo({
             top: sectionRect.top + window.scrollY - 96,
@@ -84,7 +98,7 @@ const observer = new IntersectionObserver(function (entries, observer) {
             return;
         }
         entry.target.classList.add("slide-in-left");
-        await (0, functions_js_1.delay)(1550);
+        await delay(1550);
         entry.target.classList.remove("slide-in-left");
         entry.target.classList.remove("slide");
         observer.unobserve(entry.target);

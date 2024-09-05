@@ -3,10 +3,10 @@ import { appendSVG, updateClasses, delay, debounce } from "./functions.js";
 const menuBtn = document.querySelector("#ham-menu");
 const menu = document.querySelector("nav");
 const menuListItems = document.querySelectorAll(".menu-link");
-let pathA = null;
-let pathB = null;
-let pathC = null;
-let hamburger = null;
+let pathA: HTMLElement | null = null;
+let pathB: HTMLElement | null = null;
+let pathC: HTMLElement | null = null;
+let hamburger: HTMLElement | null = null;
 const myName = document.querySelector("#my-name");
 const slideElements = document.querySelectorAll(".slide");
 
@@ -30,6 +30,9 @@ let isMenuOpen = false;
 
 async function toggleMenu() {
   await delay(250);
+
+  if (!pathA || !pathB || !pathC || !hamburger) return;
+
   if (isMenuOpen === false) {
     updateClasses(pathA, ["pathA-to-open"], ["pathA-start", "pathA-to-closed"]);
 
@@ -64,6 +67,9 @@ async function toggleMenu() {
     }
     isMenuOpen = false;
   }
+
+  if (!menu) return;
+
   if (isMenuOpen) {
     updateClasses(menu, ["right_fade_in"], ["right_fade_out"]);
     await delay(50);
@@ -86,11 +92,21 @@ async function toggleMenu() {
 
 menuListItems.forEach((item) => {
   const btn = item.querySelector(".menu-link-btn");
+  if (!btn) return;
+
   btn.addEventListener("mousedown", async function (e) {
+    const target = e.target as HTMLElement | null;
+    if (!target) return;
+
     debounce(toggleMenu, 550)();
     await delay(550);
-    const sectionId = e.target.getAttribute("data-section");
+
+    const sectionId = target.getAttribute("data-section");
+    if (!sectionId) return;
+
     const section = document.getElementById(sectionId);
+    if (!section) return;
+
     const sectionRect = section.getBoundingClientRect();
     window.scrollTo({
       top: sectionRect.top + window.scrollY - 96,
