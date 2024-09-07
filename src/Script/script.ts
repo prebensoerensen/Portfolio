@@ -92,7 +92,7 @@ async function toggleMenu() {
 }
 
 menuListItems.forEach((item) => {
-  const btn = item.querySelector(".menu-link-btn");
+  const btn: HTMLElement | null = item.querySelector(".menu-link-btn");
   if (!btn) return;
 
   btn.addEventListener("mousedown", async function (e) {
@@ -113,7 +113,7 @@ menuListItems.forEach((item) => {
       top: sectionRect.top + window.scrollY - 96,
       behavior: "smooth",
     });
-    target.blur();
+    btn.blur();
   });
 });
 

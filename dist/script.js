@@ -26,7 +26,7 @@ async function toggleMenu() {
     await delay(250);
     if (!pathA || !pathB || !pathC || !hamburger)
         return;
-    if (isMenuOpen === false) {
+    if (!isMenuOpen) {
         updateClasses(pathA, ["pathA-to-open"], ["pathA-start", "pathA-to-closed"]);
         updateClasses(pathB, ["pathB-to-open"], ["pathB-start", "pathB-to-closed"]);
         updateClasses(pathC, ["pathC-to-open"], ["pathC-start", "pathC-to-closed"]);
@@ -34,7 +34,7 @@ async function toggleMenu() {
         isMenuOpen = true;
     }
     else {
-        if (isMenuOpen === true) {
+        if (isMenuOpen) {
             updateClasses(pathA, ["pathA-to-closed"], ["pathA-start", "pathA-to-open"]);
             updateClasses(pathB, ["pathB-to-closed"], ["pathB-start", "pathB-to-open"]);
             updateClasses(pathC, ["pathC-to-closed"], ["pathC-start", "pathC-to-open"]);
@@ -63,6 +63,8 @@ async function toggleMenu() {
         await delay(250);
         updateClasses(menu, ["right_fade_out"], ["right_fade_in"]);
     }
+    if (menuBtn)
+        menuBtn.blur();
 }
 menuListItems.forEach((item) => {
     const btn = item.querySelector(".menu-link-btn");
@@ -85,6 +87,7 @@ menuListItems.forEach((item) => {
             top: sectionRect.top + window.scrollY - 96,
             behavior: "smooth",
         });
+        target.blur();
     });
 });
 const options = {
