@@ -1,6 +1,6 @@
 import { appendSVG, updateClasses, delay, debounce } from "./functions.js";
 
-const menuBtn = document.querySelector("#ham-menu");
+const menuBtn: HTMLElement | null = document.querySelector("#ham-menu");
 const menu = document.querySelector("nav");
 const menuListItems = document.querySelectorAll(".menu-link");
 let pathA: HTMLElement | null = null;
@@ -33,7 +33,7 @@ async function toggleMenu() {
 
   if (!pathA || !pathB || !pathC || !hamburger) return;
 
-  if (isMenuOpen === false) {
+  if (!isMenuOpen) {
     updateClasses(pathA, ["pathA-to-open"], ["pathA-start", "pathA-to-closed"]);
 
     updateClasses(pathB, ["pathB-to-open"], ["pathB-start", "pathB-to-closed"]);
@@ -44,7 +44,7 @@ async function toggleMenu() {
 
     isMenuOpen = true;
   } else {
-    if (isMenuOpen === true) {
+    if (isMenuOpen) {
       updateClasses(
         pathA,
         ["pathA-to-closed"],
@@ -88,6 +88,7 @@ async function toggleMenu() {
     await delay(250);
     updateClasses(menu, ["right_fade_out"], ["right_fade_in"]);
   }
+  if (menuBtn) menuBtn.blur();
 }
 
 menuListItems.forEach((item) => {
@@ -112,6 +113,7 @@ menuListItems.forEach((item) => {
       top: sectionRect.top + window.scrollY - 96,
       behavior: "smooth",
     });
+    target.blur();
   });
 });
 

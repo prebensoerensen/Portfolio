@@ -6,6 +6,7 @@
 html {
   margin: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 body {
   background: hsl(0, 0%, 7%);
