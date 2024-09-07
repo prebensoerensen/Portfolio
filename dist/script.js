@@ -87,7 +87,7 @@ menuListItems.forEach((item) => {
             top: sectionRect.top + window.scrollY - 96,
             behavior: "smooth",
         });
-        target.blur();
+        btn.blur();
     });
 });
 const options = {
