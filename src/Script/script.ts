@@ -10,6 +10,7 @@ let hamburger: HTMLElement | null = null;
 const myName = document.querySelector("#my-name");
 const slideElements = document.querySelectorAll(".slide");
 
+
 if (menuBtn) {
   appendSVG(menuBtn, "./src/Images/svg/hamburger_menu.svg").then(() => {
     pathA = document.querySelector("#pathA");
